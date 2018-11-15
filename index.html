@@ -2,45 +2,39 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-  <link rel="icon" href="https://raw.githubusercontent.com/bazpad/bazpad.github.io/master/icon.png" type="image/gif">
+
 <style id="webmakerstyle">
-html{
-  margin-left: 200px;
-  margin-right: 200px;
-    font-family: trebuchet ms;
+#search{
+  margin-top:200px;
+  font-family: helvetica;
 }
-#title{
-  margin-top: 0px;
-  font-size: 104px;
-}
-#top{
-      text-align: center;
-    height: 170px;
-  background-image: url("https://raw.githubusercontent.com/bazpad/bazpad.github.io/master/background.png");
-      color: white;
-}
-#mid{
-  
+#demo{
+  width: 450px;
 }
 </style>
 </head>
 <body>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Bazpad</title>
-  </head>
-  <body>
-        <header  id="top">
-      <h1 id="title">
-      Bazpad
-        </h1>
-    </header>
-<div class="middle" id="mid">
-    </div>
-  </body>
+<body>
+  <center id="search">
+   <img src="https://www.freeiconspng.com/uploads/lock-icon-png-10.png" alt="Related image" height="64" width="64" id="icon"/> <h1>
+      Encrypted Search
+    </h1>
+    <input id="demo">
+<button onclick="myFunction()">Search</button>
+  </center>
+</body>
 </html>
 
-<script src="filesystem:https://webmakerapp.com/temporary/script.js">
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").value; 
+    var res = str.replace(" ", "+");
+  window.location.replace("https://search.yahoo.com/search?p="+res+"&fr=yfp-t&fp=1&toggle=1&cop=mss&ei=UTF-8");
+}
+//# sourceURL=userscript.js
 </script>
 </body>
 </html>
